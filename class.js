@@ -8,5 +8,23 @@ class Train {
         this.color = color;
         this.lightsOn = lightsOn;
     }
-    
+   toggleLights() {
+    this.lightsOn =! this.lightsOn;
+   } 
+   lightsStatus() {
+    console.log('Lights on? ', this.lightsOn);
+   }
+   getSelf() {
+    console.log(this);
+   }
+   getPrototype() {
+    let proto = Object.getPrototypeOf(this);
+    console.log(proto);
+   }
 }
+
+let trian1 = new Train('blue', false);
+trian1.toggleLights();
+trian1.lightsStatus();
+trian1.getSelf();
+trian1.getPrototype();
