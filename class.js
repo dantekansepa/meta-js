@@ -42,4 +42,9 @@ class HighSpeedTrain extends Train {
         this.highSpeedOn =! this.highSpeedOn;
         console.log('High speed status: ', this.highSpeedOn);
     }
+    toggleLights() {
+        super.toggleLights();
+        super.lightsStatus();
+        console.log('Lights are 100% operational.');
+    }
 }
