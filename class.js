@@ -38,4 +38,8 @@ class HighSpeedTrain extends Train {
         this.passengers = passengers;
         this.highSpeedOn = highSpeedOn;
     }
+    toggleHighSpeed() {
+        this.highSpeedOn =! this.highSpeedOn;
+        console.log('High speed status: ', this.highSpeedOn);
+    }
 }
