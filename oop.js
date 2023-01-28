@@ -1,23 +1,23 @@
 // Task 1: Code a Person class
 class Person {
-    constructor(name = 'Tom', age = 20, energy = 100) {
-        this.name = name;
-        this.age = age;
-        this.energy = energy;
+    constructor() {
+        this.name = 'Tom';
+        this.age = 20;
+        this.energy = 100;
     }
     sleep(){
-        this.energy = this.energy + 10;
+        this.energy += 10;
     }
     doSomethingFun() {
-        this.energy = this.energy - 10;
+        this.energy -= 10;
     }
 }
 // Task 2: Code a Worker class
 class Worker extends Person {
-    constructor(xp = 0, hourlyWage = 10, name, age, energy) {
-        super(name, age, energy);
-        this.xp = xp;
-        this.hourlyWage = hourlyWage;
+    constructor() {
+        super();
+        this.xp = 0;
+        this.hourlyWage = 10;
     }
     sleep() {
         super.sleep();
@@ -26,17 +26,32 @@ class Worker extends Person {
         super.doSomethingFun();
     }
     goToWork() {
-        this.xp = this.xp + 10;
+        this.xp += 10;
     }
 }
 // Task 3: Code an intern object, run methods
 function intern() {
-    let newIntern = new Worker(0, 10, 'Bob', 21, 110);
-    return newIntern.goToWork();
+    let newIntern = new Worker();
+    newIntern.name ='Bob';
+    newIntern.age = 21;
+    newIntern.energy =110;
+    newIntern.xp = 0;
+    newIntern.hourlyWage =10;
+    newIntern.goToWork();
+    return newIntern;
 }
 
 // Task 4: Code a manager object, methods
 function manager() {
-    let newManager = new Worker(100, 30, 'Alice', 30, 120);
-    return newManager.doSomethingFun();
+    let newManager = new Worker();
+    newManager.name = 'Alice';
+    newManager.age =30;
+    newManager.energy = 120;
+    newManager.xp = 100;
+    newManager.hourlyWage = 30;
+    newManager.doSomethingFun();
+    return newManager;
 }
+
+console.log(intern());
+console.log(manager());
