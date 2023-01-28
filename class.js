@@ -48,3 +48,7 @@ class HighSpeedTrain extends Train {
         console.log('Lights are 100% operational.');
     }
 }
+
+let newTrain = new HighSpeedTrain(500, true, 'red', false);
+newTrain.toggleHighSpeed();
+newTrain.toggleLights();
