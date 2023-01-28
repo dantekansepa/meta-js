@@ -28,3 +28,14 @@ trian1.toggleLights();
 trian1.lightsStatus();
 trian1.getSelf();
 trian1.getPrototype();
+
+/* Here we are going to create a sub-clas that will inherit some properties from
+the Train class above so in this case the Train class is now our super class. 
+*/
+class HighSpeedTrain extends Train {
+    constructor(passengers, highSpeedOn, color, lightsOn) {
+        super(color, lightsOn);
+        this.passengers = passengers;
+        this.highSpeedOn = highSpeedOn;
+    }
+}
