@@ -2,3 +2,11 @@
 *of creating a class. The name of our class will be train.
 *In this exercie we will also perform class inheritence
 */
+
+class Train {
+    constructor(color, lightsOn) {
+        this.color = color;
+        this.lightsOn = lightsOn;
+    }
+    
+}
