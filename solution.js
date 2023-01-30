@@ -26,6 +26,7 @@ function birdCan(a) {
     }
 }
 console.log(birdCan(bird));
+console.log(`\n`);
 // Task 3
 for (const ani in animal) {
     console.log(`${ani}: ${animal[ani]}`)
