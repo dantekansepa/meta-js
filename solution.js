@@ -1,34 +1,36 @@
 // Task 1
-var dairy = ['cheese', 'sour cream', 'milk', 'yoghurt', 'ice cream', 'milkshake'];
-function logDiary(arr) {
-    for (i of arr) {
-        console.log(i);
+var dairy = ['cheese', 'sour cream', 'milk', 'yogurt', 'ice cream', 'milkshake']
+function logDairy(){
+    for (product of dairy){
+        console.log(product)
     }
 }
-console.log(logDiary(dairy));
-console.log('\n')
+logDairy();
 // Task 2
 const animal = {
 
-canJump: true
+    canJump: true
+    
+    };
+    
+    const bird = Object.create(animal);
+    
+    bird.canFly = true;
+    
+    bird.hasFeathers = true;
 
-};
+    function birdCan(){
+        for(key of Object.keys(bird)){
+            console.log(key + ": " + bird[key]);
+        }
+    }
+birdCan();
+// Task 3
+console.log("just double checking all of this");
 
-const bird = Object.create(animal);
-
-bird.canFly = true;
-
-bird.hasFeathers = true;
-
-function birdCan(a) {
-    for (key of Object.keys(a)) {
-        console.log(key, +':' + a[key]);
+function animalCan(){
+    for(prop in bird){
+        console.log(prop + ": " + bird[prop]);
     }
 }
-console.log(birdCan(bird));
-console.log(`\n`);
-// Task 3
-for (const ani in animal) {
-    console.log(`${ani}: ${animal[ani]}`)
-}
-
+animalCan();
