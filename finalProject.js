@@ -27,13 +27,13 @@ function getPrices(taxBoolean) {
             var finalPrice = dishData[i].price * tax;
         }
         else if(taxBoolean === false) {
-            finalPrice = dishData[i].pprice;
+            finalPrice = dishData[i].price;
         }
         else {
             console.log("You need to pass a boolean to the getPrices call!");
             return;
         }
-        console.log("Dish: " + dishData[i].name + '' + "Price: $" + finalPrice);
+        console.log("Dish: " + dishData[i].name + ' ' + "Price: $" + finalPrice);
     }
 }
 
@@ -46,7 +46,7 @@ function getDiscount(taxBoolean, guest) {
             discount = 5;
         }
         else if(guest >= 5) {
-            discount =10
+            discount = 10;
         }
         console.log('Discount is: $' + discount);
     }
